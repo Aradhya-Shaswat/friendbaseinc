@@ -18,13 +18,11 @@ interface IProps {
   postDetails: Video;
 }
 
-const chat = ({ postDetails }: IProps) => {
+const Chat = ({ postDetails }: IProps) => {
   const [post, setPost] = useState(postDetails);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [isVideoMuted, setIsVideoMuted] = useState<boolean>(false);
   const [isPostingComment, setIsPostingComment] = useState<boolean>(false);
   const [comment, setComment] = useState<string>('');
-
   const videoRef = useRef<HTMLVideoElement>(null);
   const router = useRouter();
 
@@ -113,4 +111,4 @@ export const getServerSideProps = async ({
   };
 };
 
-export default chat;
+export default Chat;
