@@ -54,6 +54,8 @@ const chat = ({ postDetails }: IProps) => {
         setPost({ ...post, comments: res.data.comments });
         setComment('');
         setIsPostingComment(false);
+
+        location.reload();
       }
     }
   };

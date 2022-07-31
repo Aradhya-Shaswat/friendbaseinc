@@ -77,7 +77,7 @@ const Chat = ({ comment, setComment, addComment, comments, isPostingComment }: I
             placeholder='Usage of Space not allowed.'
           />
           <button className='text-md text-gray-400 ' onClick={addComment}>
-            {isPostingComment ? 'Sending...' : 'Comment'}
+            {isPostingComment ? 'Sending...' : 'Send'}
           </button>
         </form>
       </div>}
