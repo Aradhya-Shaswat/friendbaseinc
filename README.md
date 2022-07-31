@@ -9,8 +9,8 @@ only a select group can be kept here
 ```
 git clone /*give the link link here*/
 cd friendbaseinc
-code .
 npm i
+code .
 npm run dev
 ```
 __Warning__ Don't use `npm start`
