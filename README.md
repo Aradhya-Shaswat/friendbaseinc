@@ -14,5 +14,4 @@ cd friendbaseinc
 code .
 npm i
 npm run dev
-
 ```
