@@ -1,15 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-import { GoVerified } from 'react-icons/go';
-import Image from 'next/image';
-import Link from 'next/link';
 import { MdOutlineCancel } from 'react-icons/md';
-import { BsFillPlayFill } from 'react-icons/bs';
-import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 
 import Comments from '../components/Comments';
 import { BASE_URL } from '../utils';
-import LikeButton from '../components/LikeButton';
 import useAuthStore from '../store/authStore';
 import { Video } from '../types';
 import axios from 'axios';
@@ -37,6 +31,7 @@ const ChatLLL = ({ postDetails }: IProps) => {
       setIsPlaying(true);
     }
   };
+
 
   var time = 1;
 
@@ -83,10 +78,10 @@ const ChatLLL = ({ postDetails }: IProps) => {
             <div className='relative'>
               <div className='lg:h-[100vh] h-[60vh]'>
                 <video
+                  autoPlay
                   ref={videoRef}
-                  onClick={onVideoClick}
                   src={post?.video?.asset.url}
-                  className=' h-full cursor-pointer'
+                  className='h-full cursor-pointer'
                 ></video>
               </div>
             </div>
@@ -112,12 +107,11 @@ const ChatLLL = ({ postDetails }: IProps) => {
 };
 
 export const getServerSideProps = async ({
-  
   // params: { },
 }: {
   params: { ibVpsZ7UUsEMUeiIv7DQyd: string };
 }) => {
-  const res = await axios.get(`${BASE_URL}/api/post/KwYcO2CkzvEYh2UFjihL4u`);
+  const res = await axios.get(`${BASE_URL}/api/post/KwYcO2CkzvEYh2UFjinwnI`);
 
   return {
     props: { postDetails: res.data },
