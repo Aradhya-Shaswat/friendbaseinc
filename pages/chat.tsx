@@ -1,92 +1,114 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+import { GoVerified } from 'react-icons/go';
 import Image from 'next/image';
 import Link from 'next/link';
-import { GoVerified } from 'react-icons/go';
+import { MdOutlineCancel } from 'react-icons/md';
+import { BsFillPlayFill } from 'react-icons/bs';
+import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 
+import Comments from '../components/Comments';
+import { BASE_URL } from '../utils';
+import LikeButton from '../components/LikeButton';
 import useAuthStore from '../store/authStore';
-import NoResults from '../components/NoChat';
-import { IUser } from '../types';
+import { Video } from '../types';
+import axios from 'axios';
 
 interface IProps {
-  isPostingComment: Boolean;
-  comment: string;
-  setComment: Dispatch<SetStateAction<string>>;
-  addComment: (e: React.FormEvent) => void;
-  comments: IComment[];
+  postDetails: Video;
 }
 
-interface IComment {
-  comment: string;
-  length?: number;
-  _key: string;
-  postedBy: { _ref?: string; _id?: string };
-}
+const Chat = ({ postDetails }: IProps) => {
+  const [post, setPost] = useState(postDetails);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isVideoMuted, setIsVideoMuted] = useState<boolean>(false);
+  const [isPostingComment, setIsPostingComment] = useState<boolean>(false);
+  const [comment, setComment] = useState<string>('');
 
-const Chat = ({ comment, setComment, addComment, comments, isPostingComment }: IProps) => {
-  const { allUsers, userProfile }: any = useAuthStore();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const router = useRouter();
 
-  setComment=()=>{
-    console.log("haha cant catch me now idiots!")
-  }
+  const { userProfile }: any = useAuthStore();
+
+  const onVideoClick = () => {
+    if (isPlaying) {
+      videoRef?.current?.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef?.current?.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const addComment = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    if (userProfile) {
+      if (comment) {
+        setIsPostingComment(true);
+        const res = await axios.put(`${BASE_URL}/api/post/${post._id}`, {
+          userId: userProfile._id,
+          comment,
+        });
+
+        setPost({ ...post, comments: res.data.comments });
+        setComment('');
+        setIsPostingComment(false);
+      }
+    }
+  };
 
   return (
-    <div className='border-t-2 border-gray-200 pt-4 px-10 mt-4 bg-[#F8F8F8] border-b-2 lg:pb-0 pb-[100px]'>
-      <div className='overflow-scroll lg:h-[457px]'>
-        {comments?.length > 0 ? (
-          comments?.map((item: IComment, idx: number) => (
-            <>
-              {allUsers?.map(
-                (user: IUser) =>
-                  user._id === (item.postedBy._ref || item.postedBy._id) && (
-                    <div className=' p-2 items-center' key={idx}>
-                      <Link href={`/profile/${user._id}`}>
-                        <div className='flex items-start gap-3'>
-                          <div className='w-12 h-12'>
-                            <Image
-                              width={48}
-                              height={48}
-                              className='rounded-full cursor-pointer'
-                              src={user.image}
-                              alt='user-profile'
-                              layout='responsive'
-                            />
-                          </div>
+    <>
+      {post && (
+        <div className='flex w-full absolute left-0 top-0 bg-white flex-wrap lg:flex-nowrap'>
+          <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-blurred-img bg-no-repeat bg-cover bg-center'>
+            <div className='opacity-90 absolute top-6 left-2 lg:left-6 flex gap-6 z-50'>
+              <p className='cursor-pointer ' onClick={() => router.back()}>
+                <MdOutlineCancel className='text-white text-[35px] hover:opacity-90' />
+              </p>
+            </div>
+            <div className='relative'>
+              <div className='lg:h-[100vh] h-[60vh]'>
+                <video
+                  ref={videoRef}
+                  onClick={onVideoClick}
+                  src={post?.video?.asset.url}
+                  className=' h-full cursor-pointer'
+                ></video>
+              </div>
+            </div>
+            <div className='absolute bottom-5 lg:bottom-10 right-5 lg:right-10  cursor-pointer'>
+            </div>
+          </div>
+          <div className='relative w-[1000px] md:w-[900px] lg:w-[700px]'>
+            <div className='lg:mt-20 mt-10'>
 
-                          <p className='flex cursor-pointer gap-1 items-center text-[18px] font-bold leading-6 text-primary'>
-                            {user.userName}{' '}
-                            <GoVerified className='text-blue-400' />
-                          </p>
-                        </div>
-                      </Link>
-                      <div>
-                        <p className='-mt-5 ml-16 text-[16px] mr-8'>
-                          {item.comment}
-                        </p>
-                      </div>
-                    </div>
-                  )
-              )}
-            </>
-          ))
-        ) : (
-          <NoResults text='No Comments Yet! Be First to do add the comment.' />
-        )}
-      </div>
-     {userProfile && <div className='absolute bottom-0 left-0  pb-6 px-2 md:px-10 '>
-        <form onSubmit={addComment} className='flex gap-4'>
-          <input
-            value={comment}
-            onChange={(e) => setComment(e.target.value.trim())}
-            className='bg-primary px-6 py-4 text-md font-medium border-2 w-[250px] md:w-[700px] lg:w-[350px] border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 flex-1 rounded-lg'
-            placeholder='Usage of Space not allowed.'
-          />
-          <button className='text-md text-gray-400 ' onClick={addComment}>
-            {isPostingComment ? 'Commenting...' : 'Comment'}
-          </button>
-        </form>
-      </div>}
-    </div>
+              <Comments
+                comment={comment}
+                setComment={setComment}
+                addComment={addComment}
+                comments={post.comments}
+                isPostingComment={isPostingComment}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
+};
+
+export const getServerSideProps = async ({
+  // params: { },
+}: {
+  params: { ibVpsZ7UUsEMUeiIv7DQyd: string };
+}) => {
+  const res = await axios.get(`${BASE_URL}/api/post/KwYcO2CkzvEYh2UFjihL4u`);
+
+  return {
+    props: { postDetails: res.data },
+  };
 };
 
 export default Chat;
