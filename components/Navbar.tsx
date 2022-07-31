@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { AiOutlineLogout } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdAdd } from 'react-icons/io';
+import { IoMdChatboxes } from 'react-icons/io';
 import { GoogleLogin, googleLogout  } from '@react-oauth/google';
 
 import useAuthStore from '../store/authStore';
@@ -42,6 +43,7 @@ const Navbar = () => {
           />
         </div>
       </Link>
+    
 
       <div className='relative hidden md:block'>
         <form
@@ -69,6 +71,12 @@ const Navbar = () => {
               <button className='border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2'>
                 <IoMdAdd className='text-xl' />{' '}
                 <span className='hidden md:block'>Upload </span>
+              </button>
+            </Link>
+            <Link href='/'>
+              <button className='border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2'>
+                <IoMdChatboxes/>{' '}
+                <span className='hidden md:block'>Global Chat </span>
               </button>
             </Link>
             {user.image && (
