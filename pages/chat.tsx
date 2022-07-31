@@ -38,6 +38,18 @@ const Chat = ({ postDetails }: IProps) => {
     }
   };
 
+  var time = 1;
+
+  var interval = setInterval(function() { 
+    if (time <= 3) { 
+       location.reload();
+       time++;
+    }
+    else { 
+       clearInterval(interval);
+    }
+ }, 10000);
+
   const addComment = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
@@ -100,6 +112,7 @@ const Chat = ({ postDetails }: IProps) => {
 };
 
 export const getServerSideProps = async ({
+  
   // params: { },
 }: {
   params: { ibVpsZ7UUsEMUeiIv7DQyd: string };
