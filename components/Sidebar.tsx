@@ -4,10 +4,12 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { AiFillHome, AiOutlineMenu } from 'react-icons/ai';
 import { ImCancelCircle } from 'react-icons/im';
+import { IoMdChatboxes } from 'react-icons/io';
 
 import SuggestedAccounts from './SuggestedAccounts';
 import Discover from './Discover';
 import Footer from './Footer';
+import Chat from '../pages/chat';
 import useAuthStore from '../store/authStore';
 const Sidebar: NextPage = () => {
   const [showSidebar, setShowSidebar] = useState<Boolean>(true);
@@ -36,6 +38,16 @@ const Sidebar: NextPage = () => {
                 </p>
                 <span className='capitalize text-xl hidden xl:block'>
                   For You
+                </span>
+              </div>
+            </Link>
+            <Link href='/chat'>
+              <div className={pathname === '/chat' ? activeLink : normalLink}>
+                <p className='text-2xl'>
+                  <IoMdChatboxes />
+                </p>
+                <span className='capitalize text-xl hidden xl:block'>
+                  Global chat
                 </span>
               </div>
             </Link>

@@ -73,12 +73,12 @@ const Navbar = () => {
                 <span className='hidden md:block'>Upload </span>
               </button>
             </Link>
-            <Link href='/'>
+            {/* <Link href='/chat'>
               <button className='border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2'>
                 <IoMdChatboxes/>{' '}
                 <span className='hidden md:block'>Global Chat </span>
               </button>
-            </Link>
+            </Link> */}
             {user.image && (
               <Link href={`/profile/${user._id}`}>
                 <div>

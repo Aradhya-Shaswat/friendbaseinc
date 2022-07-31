@@ -11,7 +11,7 @@ interface IProps {
   isPostingComment: Boolean;
   comment: string;
   setComment: Dispatch<SetStateAction<string>>;
-  addComment: (e: React.FormEvent) => void;
+  addComment: (e: React.FormEvent) => typeof addComment;
   comments: IComment[];
 }
 
@@ -22,7 +22,11 @@ interface IComment {
   postedBy: { _ref?: string; _id?: string };
 }
 
-const Comments = ({ comment, setComment, addComment, comments, isPostingComment }: IProps) => {
+function addComment(){
+// this is OG at its finest
+}
+
+const Chat = ({ comment, setComment, addComment, comments, isPostingComment }: IProps) => {
   const { allUsers, userProfile }: any = useAuthStore();
 
   return (
@@ -65,10 +69,10 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
             </>
           ))
         ) : (
-          <NoResults text='No Chat! Add One and boom!' />
+          <NoResults text='No Chat! Add One and boom!'/>
         )}
       </div>
-        <div className='content-center'>
+        <div className='justify-center align-center'>
             {userProfile && <div className='absolute bottom-0 left-0  pb-6 px-2 md:px-10 '>
             <form onSubmit={addComment} className='flex gap-4'>
             <input
@@ -86,4 +90,4 @@ const Comments = ({ comment, setComment, addComment, comments, isPostingComment 
   );
 };
 
-export default Comments;
+export default Chat;
