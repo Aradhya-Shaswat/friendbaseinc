@@ -9,6 +9,7 @@ export const createOrGetUser = async (response: any, addUser: any) => {
     return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
   }).join(''));
   
+  
   const { name, picture, sub } = JSON.parse(jsonPayload)
   
   const user = {
