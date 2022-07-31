@@ -18,7 +18,7 @@ interface IProps {
   postDetails: Video;
 }
 
-const Chat = ({ postDetails }: IProps) => {
+const ChatLLL = ({ postDetails }: IProps) => {
   const [post, setPost] = useState(postDetails);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isPostingComment, setIsPostingComment] = useState<boolean>(false);
@@ -124,4 +124,4 @@ export const getServerSideProps = async ({
   };
 };
 
-export default Chat;
+export default ChatLLL;
