@@ -13,4 +13,4 @@ code .
 npm i
 npm run dev
 ```
-_Warning_ Don't use `npm start`
+__Warning__ Don't use `npm start`
