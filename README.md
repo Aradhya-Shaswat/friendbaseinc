@@ -1,7 +1,6 @@
 # Friendbase
 Friendbase is a website (not a app right now but we are working on it) that connects people (like anyother social Media app) only difference being that 
 only a select group can be kept here
-also DONT do `npm start` (if your planing to change it) DO `npm run dev`
 
 ## how to commit/change code
 1) fork the repo
@@ -14,3 +13,4 @@ code .
 npm i
 npm run dev
 ```
+_Warning_ Don't use `npm start`
