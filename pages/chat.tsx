@@ -21,7 +21,6 @@ interface IProps {
 const chat = ({ postDetails }: IProps) => {
   const [post, setPost] = useState(postDetails);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [isVideoMuted, setIsVideoMuted] = useState<boolean>(false);
   const [isPostingComment, setIsPostingComment] = useState<boolean>(false);
   const [comment, setComment] = useState<string>('');
 
