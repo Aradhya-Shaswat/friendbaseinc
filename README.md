@@ -7,7 +7,7 @@ only a select group can be kept here
 2) copy the githubProvided link 
 3) in git do 
 ```
-git clone /*give the link link here*/
+git clone https://github.com/Aradhya-Shaswat/friendbaseinc.git
 cd friendbaseinc
 npm i
 code .
