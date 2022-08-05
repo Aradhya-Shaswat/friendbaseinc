@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { GoVerified } from 'react-icons/go';
 import Link from 'next/link';
@@ -24,6 +25,11 @@ const Search = ({ videos }: { videos: Video[] }) => {
   
   return (
     <div className='w-full  '>
+      <Head>
+        <title>Friendbase.</title>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"
+     crossorigin="anonymous"></script>
+      </Head>
       <div className='flex gap-10 mb-10 border-b-2 border-gray-200 md:fixed z-50 bg-white w-full'>
         <p onClick={() => setIsAccounts(true)} className={`text-xl  font-semibold cursor-pointer ${accounts} mt-2`}>
           Accounts
