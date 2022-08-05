@@ -28,7 +28,7 @@ const Search = ({ videos }: { videos: Video[] }) => {
       <Head>
         <title>Friendbase.</title>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"
-     crossorigin="anonymous"></script>
+     ></script>
       </Head>
       <div className='flex gap-10 mb-10 border-b-2 border-gray-200 md:fixed z-50 bg-white w-full'>
         <p onClick={() => setIsAccounts(true)} className={`text-xl  font-semibold cursor-pointer ${accounts} mt-2`}>

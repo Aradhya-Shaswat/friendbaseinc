@@ -18,7 +18,7 @@ const Home = ({ videos }: IProps) => {
       <Head>
         <title>Friendbase.</title>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"
-     crossorigin="anonymous"></script>
+     ></script>
       </Head>
       {videos.length 
         ? videos?.map((video: Video) => (

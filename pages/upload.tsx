@@ -90,7 +90,7 @@ const Upload = () => {
       <Head>
         <title>Friendbase.</title>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"
-     crossorigin="anonymous"></script>
+     ></script>
       </Head>
       <div className=' bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
         <div>
