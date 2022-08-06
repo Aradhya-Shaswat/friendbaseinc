@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Head from 'next/head';
 
 
 import VideoCard from '../components/VideoCard';
@@ -11,10 +12,14 @@ interface IProps {
   videos: Video[];
 }
 
-
 const Home = ({ videos }: IProps) => {
   return (
     <div className='flex flex-col gap-10 videos h-full'>
+      <Head>
+        <title>Friendbase.</title>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"
+     ></script>
+      </Head>
       {videos.length 
         ? videos?.map((video: Video) => (
           <VideoCard post={video} isShowingOnHome key={video._id} />

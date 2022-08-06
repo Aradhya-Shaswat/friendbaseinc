@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { SanityAssetDocument } from '@sanity/client';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FaCloudUploadAlt } from 'react-icons/fa';
 import { MdDelete } from 'react-icons/md';
@@ -86,6 +87,11 @@ const Upload = () => {
 
   return (
     <div className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
+      <Head>
+        <title>Friendbase.</title>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"
+     ></script>
+      </Head>
       <div className=' bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
         <div>
           <div>

@@ -1949,6 +1949,11 @@
   "resolved" "https://registry.npmjs.org/same-origin/-/same-origin-0.1.1.tgz"
   "version" "0.1.1"
 
+"sanity@^2.29.3":
+  "integrity" "sha512-k4A4MzAcCp7VzdvnbQQRkmmuQuXL2jsxwmH0fzCU0uyPWi+DZDQFsZKuoxhDscTOHOhRcZh0+z1EIFs4wRbSzg=="
+  "resolved" "https://registry.npmjs.org/sanity/-/sanity-2.29.3.tgz"
+  "version" "2.29.3"
+
 "scheduler@^0.22.0":
   "integrity" "sha512-6QAm1BgQI88NPYymgGQLCZgvep4FyePDWFpXVK+zNSUgHwlqpJy8VEh8Et0KxTACS4VWwMousBElAZOH9nkkoQ=="
   "resolved" "https://registry.npmjs.org/scheduler/-/scheduler-0.22.0.tgz"
