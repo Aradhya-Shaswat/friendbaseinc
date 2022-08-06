@@ -65,10 +65,10 @@ const Chat = ({ comment, setComment, addComment, comments, isPostingComment }: I
             </>
           ))
         ) : (
-          <NoChat text='No Chats Yet! Add one and Chat :D!' />
+          <NoChat />
         )}
       </div>
-     {userProfile && <div className='absolute bottom-0 left-0  pb-6 px-2 md:px-10 '>
+      {userProfile && <div className='absolute bottom-0 left-0  pb-6 px-2 md:px-10 '>
         <form onSubmit={addComment} className='flex gap-4'>
           <input
             value={comment}
@@ -77,7 +77,7 @@ const Chat = ({ comment, setComment, addComment, comments, isPostingComment }: I
             placeholder='Usage of Space not allowed.'
           />
           <button className='text-md text-gray-400 ' onClick={addComment}>
-            {isPostingComment ? 'Sending...' : 'Comment'}
+            {isPostingComment ? 'Sending...' : 'Send'}
           </button>
         </form>
       </div>}

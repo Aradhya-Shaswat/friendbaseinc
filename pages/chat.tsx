@@ -1,15 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-import { GoVerified } from 'react-icons/go';
-import Image from 'next/image';
-import Link from 'next/link';
 import { MdOutlineCancel } from 'react-icons/md';
-import { BsFillPlayFill } from 'react-icons/bs';
-import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 
 import Comments from '../components/Comments';
 import { BASE_URL } from '../utils';
-import LikeButton from '../components/LikeButton';
 import useAuthStore from '../store/authStore';
 import { Video } from '../types';
 import axios from 'axios';
@@ -18,7 +12,7 @@ interface IProps {
   postDetails: Video;
 }
 
-const Chat = ({ postDetails }: IProps) => {
+const ChatLLL = ({ postDetails }: IProps) => {
   const [post, setPost] = useState(postDetails);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isPostingComment, setIsPostingComment] = useState<boolean>(false);
@@ -38,6 +32,19 @@ const Chat = ({ postDetails }: IProps) => {
     }
   };
 
+
+  var time = 1;
+
+  var interval = setInterval(function() { 
+    if (time <= 3) { 
+       location.reload();
+       time++;
+    }
+    else { 
+       clearInterval(interval);
+    }
+ }, 10000);
+
   const addComment = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
@@ -52,6 +59,8 @@ const Chat = ({ postDetails }: IProps) => {
         setPost({ ...post, comments: res.data.comments });
         setComment('');
         setIsPostingComment(false);
+
+        location.reload();
       }
     }
   };
@@ -69,10 +78,10 @@ const Chat = ({ postDetails }: IProps) => {
             <div className='relative'>
               <div className='lg:h-[100vh] h-[60vh]'>
                 <video
+                  autoPlay
                   ref={videoRef}
-                  onClick={onVideoClick}
                   src={post?.video?.asset.url}
-                  className=' h-full cursor-pointer'
+                  className='h-full cursor-pointer'
                 ></video>
               </div>
             </div>
@@ -102,11 +111,11 @@ export const getServerSideProps = async ({
 }: {
   params: { ibVpsZ7UUsEMUeiIv7DQyd: string };
 }) => {
-  const res = await axios.get(`${BASE_URL}/api/post/KwYcO2CkzvEYh2UFjihL4u`);
+  const res = await axios.get(`${BASE_URL}/api/post/KwYcO2CkzvEYh2UFjinwnI`);
 
   return {
     props: { postDetails: res.data },
   };
 };
 
-export default Chat;
+export default ChatLLL;
