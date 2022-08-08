@@ -25,13 +25,13 @@ npm run dev
 __Warning__ Don't use `npm start`
 
 ### __IF wanting to contact us__:
-  1) Aradhy-Shaswat : {
-  Gmail : "",
-  Discord : "Arsh_DEV#7525",
-  Phone : ""
-  } ,
-  2) Armaan : {
-  Gmail : "twlightzonehelp@gmail.com",
-  Discord : "Twlight_zone#7037",
-  Phone : "+91 9334153403"
+  1) Aradhy-Shaswat : { <br />
+  Gmail : "", <br />
+  Discord : "Arsh_DEV#7525", <br />
+  Phone : "" <br />
+  } , <br />
+  2) Armaan : { <br />
+  Gmail : "twlightzonehelp@gmail.com", <br />
+  Discord : "Twlight_zone#7037", <br />
+  Phone : "+91 9334153403" <br />
   }
