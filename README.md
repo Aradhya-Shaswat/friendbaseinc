@@ -14,6 +14,16 @@ npm run dev
 ```
 __Warning__ Don't use `npm start`
 
+## How to commit/change code (unstable version)
+```
+git clone https://github.com/Twlightzone/friendbaseinc.git
+cd friendbaseinc
+npm i
+code .
+npm run dev
+```
+__Warning__ Don't use `npm start`
+
 ### __IF wanting to contact us__:
   1) Aradhy-Shaswat : {
   Gmail : "",
