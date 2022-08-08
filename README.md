@@ -26,7 +26,7 @@ __Warning__ Don't use `npm start`
 
 ### __IF wanting to contact us__:
   1) Aradhy-Shaswat : { <br />
-  Gmail : "", <br />
+  Gmail : "reddye1120@gmail.com", <br />
   Discord : "Arsh_DEV#7525", <br />
   Phone : "" <br />
   } , <br />
