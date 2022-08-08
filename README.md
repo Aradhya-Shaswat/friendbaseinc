@@ -31,7 +31,7 @@ npm run dev
 ```
 __Warning__ Don't use `npm start`
 
-### __IF wanting to contact us__:
+### __Contact us we are not **always** busy __:
   1) Aradhy-Shaswat : { <br />
   Gmail : "reddye1120@gmail.com", <br />
   Discord : "Arsh_DEV#7525", <br />
