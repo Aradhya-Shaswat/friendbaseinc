@@ -1,27 +1,50 @@
 # Friendbase.
-Friendbase is a website (not a app right now but we are working on it) that connects people (like any other social Media app) only difference being that 
-only a select group can be kept here
+Friendbase is a Website (works best on mobile, so our team are making the app version as you may read this).
+The Kind of website that connects people made yours truely by the people. I will say that We here at FIB inc. are very welcome of all the people who sign up for this app and post their stuff here.
 
+## Rules : 
+No abusive languages (except the mild ones)
+Respect any and all,
+Be nice :)
+Post memes, Hot takes, Reels, Whatever we don't care UNTIL and UNLESS any *Non pg releated stuff* are posted.
+
+### If You were to find rule breakers; Please Contact me (Armaan) on Discord or Whatsapp Contact info is given here - [this link](https://www.youtube.com/watch?v=dQw4w9WgXcQ) Just Joking 🤣 Anyways scroll down to see it :)
 ## How to commit/change code
 1) Fork the repo
 2) Open Git
 ```
 git clone https://github.com/Aradhya-Shaswat/friendbaseinc.git
 cd friendbaseinc
-npm i
+npm i --legacy-peer-deps
 code .
 npm run dev
 ```
 __Warning__ Don't use `npm start`
 
-### __IF wanting to contact us__:
-  1) Aradhy-Shaswat : {
-  Gmail : "",
-  Discord : "Arsh_DEV#7525",
-  Phone : ""
-  } ,
-  2) Armaan : {
-  Gmail : "twlightzonehelp@gmail.com",
-  Discord : "Twlight_zone#7037",
-  Phone : "+91 9334153403"
+## How to commit/change code (unstable version)
+```
+git clone https://github.com/Twlightzone/friendbaseinc.git
+cd friendbaseinc
+npm i --legacy-peer-deps
+code .
+npm run dev
+```
+__Warning__ Don't use `npm start`
+
+### __Contact us we are not *always* busy __:
+  1) Aradhy-Shaswat : { <br />
+  Gmail : "reddye1120@gmail.com", <br />
+  Discord : "Arsh_DEV#7525", <br />
+  Phone : "" <br />
+  } , <br />
+  2) Armaan : { <br />
+  Gmail : "twlightzonehelp@gmail.com", <br />
+  Discord : "Twlight_zone#7037", <br />
+  Phone : "+91 9334153403" <br />
   }
+
+
+### If You (the person who tries to run our app through `npm run dev`) Shows a error Do :
+1) Contact us 
+2) Check if all the files are there (notable mention : `.env.development` can only be given to you by Arsh so contact him not me :)
+3) Try to run `npm i --force` as `npm i --legacy-peer-deps` sometimes does not work (for me).
