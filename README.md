@@ -42,3 +42,9 @@ __Warning__ Don't use `npm start`
   Discord : "Twlight_zone#7037", <br />
   Phone : "+91 9334153403" <br />
   }
+
+
+### If You (the person who tries to run our app through `npm run dev`) Shows a error Do :
+1) Contact us 
+2) Check if all the files are there (notable mention : `.env.development` can only be given to you by Arsh so contact him not me :)
+3) Try to run `npm i --legacy-peer-deps` as `npm i` sometimes does not work (for me).
