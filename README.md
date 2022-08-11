@@ -15,7 +15,7 @@ Post memes, Hot takes, Reels, Whatever we don't care UNTIL and UNLESS any *Non p
 ```
 git clone https://github.com/Aradhya-Shaswat/friendbaseinc.git
 cd friendbaseinc
-npm i
+npm i --legacy-peer-deps
 code .
 npm run dev
 ```
@@ -25,7 +25,7 @@ __Warning__ Don't use `npm start`
 ```
 git clone https://github.com/Twlightzone/friendbaseinc.git
 cd friendbaseinc
-npm i
+npm i --legacy-peer-deps
 code .
 npm run dev
 ```
@@ -47,4 +47,4 @@ __Warning__ Don't use `npm start`
 ### If You (the person who tries to run our app through `npm run dev`) Shows a error Do :
 1) Contact us 
 2) Check if all the files are there (notable mention : `.env.development` can only be given to you by Arsh so contact him not me :)
-3) Try to run `npm i --legacy-peer-deps` as `npm i` sometimes does not work (for me).
+3) Try to run `npm i --force` as `npm i --legacy-peer-deps` sometimes does not work (for me).
