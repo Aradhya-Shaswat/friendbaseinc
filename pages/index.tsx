@@ -14,7 +14,7 @@ interface IProps {
 
 const Home = ({ videos }: IProps) => {
   return (
-    <div className='flex flex-col gap-10 videos h-full'>
+    <div className='flex flex-col gap-10 videos h-full bg-primary'>
       <Head>
         <title>Friendbase.</title>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"

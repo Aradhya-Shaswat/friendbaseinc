@@ -41,7 +41,6 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
       <div>
         <Link href={`/detail/${_id}`}>
           <video
-            loop
             src={video.asset.url}
             className='w-[250px] md:w-full rounded-xl cursor-pointer'
           ></video>
@@ -86,13 +85,13 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
                   {postedBy.userName}{' '}
                   <GoVerified className='text-blue-400 text-md' />
                 </p>
-                <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
+                <p className='capitalize font-medium text-xs text-white hidden md:block'>
                   {postedBy.userName}
                 </p>
               </div>
             </Link>
             <Link href={`/detail/${_id}`}>
-              <p className='mt-2 font-normal '>{caption}</p>
+              <p className='mt-2 font-normal text-white '>{caption}</p>
             </Link>
           </div>
         </div>
