@@ -33,9 +33,9 @@ __Warning__ Don't use `npm start`
 
 ### __Contact us we are not *always* busy __:
   1) Aradhy-Shaswat : { <br />
-  Gmail : "reddye1120@gmail.com", <br />
+  Gmail : "info@friendbase.tech", <br />
   Discord : "Arsh_DEV#7525", <br />
-  Phone : "" <br />
+  Phone : "+91 7903950219 <br />
   } , <br />
   2) Armaan : { <br />
   Gmail : "twlightzonehelp@gmail.com", <br />
