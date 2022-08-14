@@ -26,7 +26,7 @@ const Chat = ({ comment, setComment, addComment, comments, isPostingComment }: I
   const { allUsers, userProfile }: any = useAuthStore();
 
   return (
-    <div className='border-t-2 border-gray-200 pt-4 px-10 mt-4 bg-[#F8F8F8] border-b-2 lg:pb-0 pb-[100px]'>
+    <div className='border-t-2 border-gray-200 pt-4 px-10 mt-4 bg-[#2d2d2d] border-b-2 lg:pb-0 pb-[100px]'>
       <div className='overflow-scroll lg:h-[457px]'>
         {comments?.length > 0 ? (
           comments?.map((item: IComment, idx: number) => (
@@ -48,14 +48,14 @@ const Chat = ({ comment, setComment, addComment, comments, isPostingComment }: I
                             />
                           </div>
 
-                          <p className='flex cursor-pointer gap-1 items-center text-[18px] font-bold leading-6 text-primary'>
+                          <p className='flex cursor-pointer gap-1 items-center text-[18px] font-bold leading-6 text-white'>
                             {user.userName}{' '}
                             <GoVerified className='text-blue-400' />
                           </p>
                         </div>
                       </Link>
                       <div>
-                        <p className='-mt-5 ml-16 text-[16px] mr-8'>
+                        <p className='-mt-5 ml-16 text-[16px] mr-8 text-white'>
                           {item.comment}
                         </p>
                       </div>
@@ -73,10 +73,10 @@ const Chat = ({ comment, setComment, addComment, comments, isPostingComment }: I
           <input
             value={comment}
             onChange={(e) => setComment(e.target.value.trim())}
-            className='bg-primary px-6 py-4 text-md font-medium border-2 w-[250px] md:w-[700px] lg:w-[350px] border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 flex-1 rounded-lg'
+            className='bg-primary px-6 py-4 text-md font-medium border-2 w-[250px] md:w-[700px] lg:w-[350px] border-primary focus:outline-none focus:border-2 focus:border-primary flex-1 rounded-lg'
             placeholder='Usage of Space not allowed.'
           />
-          <button className='text-md text-gray-400 ' onClick={addComment}>
+          <button className='text-md text-gray-200 bg-[#2d2d2d]' onClick={addComment}>
             {isPostingComment ? 'Sending...' : 'Send'}
           </button>
         </form>
