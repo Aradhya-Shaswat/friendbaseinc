@@ -21,6 +21,11 @@ npm run dev
 ```
 __Warning__ Don't use `npm start`
 
+__IF__ you have VS's git working use that to commit changed and to make PRs follow these steps : <br>
+  1) FEATURE : //your change <br>
+  2) TYPO : //your chage (with line number) <br>
+  3) OTHERCHANGES : //expain in detail what has been changed <br>
+
 ## How to commit/change code (unstable version)
 ```
 git clone https://github.com/Twlightzone/friendbaseinc.git
@@ -30,6 +35,11 @@ code .
 npm run dev
 ```
 __Warning__ Don't use `npm start`
+
+__IF__ you have VS's git working use that to commit changed and to make PRs follow these steps : <br>
+  1) FEATURE : //your change <br>
+  2) TYPO : //your chage (with line number) <br>
+  3) OTHERCHANGES : //expain in detail what has been changed <br>
 
 ### __Contact us we are not *always* busy __:
   1) Aradhy-Shaswat : { <br />
@@ -46,5 +56,5 @@ __Warning__ Don't use `npm start`
 
 ### If You (the person who tries to run our app through `npm run dev`) Shows a error Do :
 1) Contact us 
-2) Check if all the files are there (notable mention : `.env.development` can only be given to you by Arsh so contact him not me :)
+2) Check if all the files are there (notable mention : `.env.development` can only be given to you by Arsh so contact him not me I don't get the tokens :(
 3) Try to run `npm i --force` as `npm i --legacy-peer-deps` sometimes does not work (for me).

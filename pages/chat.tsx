@@ -73,6 +73,7 @@ const ChatLLL = ({ postDetails }: IProps) => {
             <div className='opacity-90 absolute top-6 left-2 lg:left-6 flex gap-6 z-50'>
               <p className='cursor-pointer ' onClick={() => router.back()}>
                 <MdOutlineCancel className='text-white text-[35px] hover:opacity-90' />
+                
               </p>
             </div>
             <div className='relative'>
