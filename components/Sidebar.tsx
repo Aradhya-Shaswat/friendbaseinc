@@ -16,9 +16,9 @@ const Sidebar: NextPage = () => {
   const { pathname } = useRouter();
   const { fetchAllUsers, allUsers }: any = useAuthStore();
 
-  const activeLink = 'flex items-center gap-3 bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded hover:bg-gray-800';
+  const activeLink = 'flex items-center gap-3 bg-[#101010] p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded hover:bg-gray-800';
 
-  const normalLink = 'flex items-center gap-3 bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded hover:bg-gray-800';
+  const normalLink = 'flex items-center gap-3 bg-[#101010] p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded hover:bg-gray-800';
 
   return (
     <div>
@@ -29,8 +29,8 @@ const Sidebar: NextPage = () => {
         {showSidebar ? <ImCancelCircle /> : <AiOutlineMenu />}
       </div>
       {showSidebar && (
-        <div className='xl:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 border-primary xl:border-0 p-3 '>
-          <div className='xl:border-b-2 border-primary xl:pb-4'>
+        <div className='xl:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 border-[#101010] xl:border-0 p-3 '>
+          <div className='xl:border-b-2 border-[#101010] xl:pb-4'>
             <Link href='/'>
               <div className={pathname === '/' ? activeLink : normalLink}>
                 <p className='text-2xl hover:text-white'>
