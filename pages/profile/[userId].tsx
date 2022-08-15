@@ -44,7 +44,7 @@ const Profile = ({ data }: IProps) => {
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"
      ></script>
       </Head>
-      <div className='flex gap-6 md:gap-10 mb-4 bg-white w-full'>
+      <div className='flex gap-6 md:gap-10 mb-4 bg-[#101010] w-full'>
         <div className='w-16 h-16 md:w-32 md:h-32'>
           <Image
             width={120}
@@ -57,19 +57,19 @@ const Profile = ({ data }: IProps) => {
         </div>
 
         <div>
-          <div className='text-md md:text-2xl font-bold tracking-wider flex gap-2 items-center justify-center lowercase'>
+          <div className='text-md md:text-2xl font-bold tracking-wider flex gap-2 items-center justify-center lowercase text-white'>
             <span>{user.userName.replace(/\s+/g, '')} </span>
             <GoVerified className='text-blue-400 md:text-xl text-md' />
           </div>
-          <p className='text-sm font-medium'> {user.userName}</p>
+          <p className='text-sm font-medium text-white'> {user.userName}</p>
         </div>
       </div>
       <div>
-        <div className='flex gap-10 mb-10 mt-10 border-b-2 border-gray-200 bg-white w-full'>
-          <p className={`text-xl font-semibold cursor-pointer ${videos} mt-2`} onClick={() => setShowUserVideos(true)}>
+        <div className='flex gap-10 mb-10 mt-10 border-b-2 border-gray-200 bg-[#101010] w-full'>
+          <p className={`text-xl font-semibold cursor-pointer text-white ${videos} mt-2`} onClick={() => setShowUserVideos(true)}>
             Videos
           </p>
-          <p className={`text-xl font-semibold cursor-pointer ${liked} mt-2`} onClick={() => setShowUserVideos(false)}>
+          <p className={`text-xl font-semibold cursor-pointer text-white ${liked} mt-2`} onClick={() => setShowUserVideos(false)}>
             Liked
           </p>
         </div>

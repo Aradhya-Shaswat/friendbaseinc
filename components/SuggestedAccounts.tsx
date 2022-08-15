@@ -21,14 +21,14 @@ const SuggestedAccounts: NextPage<IProps> = ({ fetchAllUsers, allUsers }) => {
     .slice(0, allUsers.length);
 
   return (
-    <div className='xl:border-b-2 border-primary pb-4'>
-      <p className='text-white bg-gray-900 font-semibold m-3 mt-4 hidden xl:block'>
+    <div className='xl:border-b-2 border-[#101010] pb-4'>
+      <p className='text-white bg-[#101010] font-semibold m-3 mt-4 hidden xl:block'>
         Suggested accounts
       </p>
       <div>
         {users?.slice(0, 6).map((user: IUser) => (
           <Link href={`/profile/${user._id}`} key={user._id}>
-            <div className='flex gap-3 bg-primary hover:bg-gray-800 p-2 cursor-pointer font-semibold rounded'>
+            <div className='flex gap-3 bg-[#101010] hover:bg-gray-800 p-2 cursor-pointer font-semibold rounded'>
               <div className='w-8 h-8'>
                 <Image
                   width={34}

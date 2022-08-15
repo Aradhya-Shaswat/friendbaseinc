@@ -52,7 +52,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
               </p>
             </div>
         <Link href={`/detail/${_id}`}>
-          <p className='mt-5 text-md text-gray-800 cursor-pointer w-210'>
+          <p className='mt-5 text-md text-white cursor-pointer w-210'>
             {caption}
           </p>
         </Link>
@@ -105,7 +105,6 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
         >
           <Link href={`/detail/${_id}`}>
             <video
-              loop
               ref={videoRef}
               src={video.asset.url}
               className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
