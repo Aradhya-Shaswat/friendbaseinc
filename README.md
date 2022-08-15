@@ -23,7 +23,7 @@ __Warning__ Don't use `npm start`
 
 __IF__ you have VS's git working use that to commit changed and to make PRs follow these steps : <br>
   1) FEATURE : //your change <br>
-  2) TYPO ://your chage (with line number) <br>
+  2) TYPO : //your chage (with line number) <br>
   3) OTHERCHANGES : //expain in detail what has been changed <br>
 
 ## How to commit/change code (unstable version)
@@ -38,7 +38,7 @@ __Warning__ Don't use `npm start`
 
 __IF__ you have VS's git working use that to commit changed and to make PRs follow these steps : <br>
   1) FEATURE : //your change <br>
-  2) TYPO ://your chage (with line number) <br>
+  2) TYPO : //your chage (with line number) <br>
   3) OTHERCHANGES : //expain in detail what has been changed <br>
 
 ### __Contact us we are not *always* busy __:
