@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
+import {View, Text, SafeAreaView} from 'react';
 // TODO All the `declare module 'react-native';` to the types.d.ts :)
 
 const Profiles = () => {
