@@ -61,10 +61,10 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
   }
 
   return (
-    <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
+    <div className='flex flex-col border-b-2 bg-[#101010] pb-6'>
       <div>
-        <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded '>
-          <div className='md:w-16 md:h-16 w-10 h-10'>
+        <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded bg-[#101010]'>
+          <div className='md:w-16 md:h-16 w-10 h-10 text-white bg-[#101010]'>
             <Link href={`/profile/${postedBy?._id}`}>
               <>
                 <Image
@@ -80,24 +80,24 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
           </div>
           <div>
             <Link href={`/profile/${postedBy?._id}`}>
-              <div className='flex items-center gap-2'>
-                <p className='flex gap-2 items-center md:text-md font-bold text-primary'>
+              <div className='flex items-center gap-2 bg-[#101010]'>
+                <p className='flex gap-2 items-center md:text-md font-bold text-white bg-[#101010]'>
                   {postedBy.userName}{' '}
                   <GoVerified className='text-blue-400 text-md' />
                 </p>
-                <p className='capitalize font-medium text-xs text-white hidden md:block'>
+                <p className='capitalize font-medium text-xs text-white hidden md:block bg-[#101010]'>
                   {postedBy.userName}
                 </p>
               </div>
             </Link>
             <Link href={`/detail/${_id}`}>
-              <p className='mt-2 font-normal text-white '>{caption}</p>
+              <p className='mt-2 font-normal text-white bg-[#101010]'>{caption}</p>
             </Link>
           </div>
         </div>
       </div>
 
-      <div className='lg:ml-20 flex gap-4 relative'>
+      <div className='lg:ml-20 flex gap-4 relative bg-[#101010]'>
         <div
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
@@ -107,7 +107,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
             <video
               ref={videoRef}
               src={video.asset.url}
-              className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
+              className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-[#101010]'
             ></video>
           </Link>
 
