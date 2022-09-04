@@ -188,7 +188,9 @@ const Upload = () => {
                 {item.name}
               </option>
             ))}
-            
+
+          
+          
           </select>
           <div className='flex gap-6 mt-10'>
             <button
