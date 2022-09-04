@@ -92,7 +92,7 @@ const Upload = () => {
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2010037573478673"
      ></script>
       </Head>
-      <div className=' bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
+      <div className=' bg-primary rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
         <div>
           <div>
             <p className='text-2xl font-bold'>Upload Video</p>
@@ -182,12 +182,13 @@ const Upload = () => {
             {topics.map((item) => (
               <option
                 key={item.name}
-                className=' outline-none capitalize bg-white text-gray-700 text-md p-2 hover:bg-slate-300'
+                className=' outline-none capitalize bg-primaruy text-gray-700 text-md p-2 hover:bg-slate-300'
                 value={item.name}
               >
                 {item.name}
               </option>
             ))}
+            
           </select>
           <div className='flex gap-6 mt-10'>
             <button
